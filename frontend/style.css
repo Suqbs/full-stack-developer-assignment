@@ -23,3 +23,32 @@ video {
   max-width: 100%;
 }
 /* CSS RESET ENDS HERE */
+
+/* FONT FACES */
+@font-face {
+    font-family: 'avenirbook';
+    src: url('avenir-book-webfont.woff2') format('woff2'),
+         url('avenir-book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserratmedium';
+    src: url('montserrat-medium-webfont.woff2') format('woff2'),
+         url('montserrat-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserratregular';
+    src: url('montserrat-regular-webfont.woff2') format('woff2'),
+         url('montserrat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/* FONT FACES ENDS HERE */
