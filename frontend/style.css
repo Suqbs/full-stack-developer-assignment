@@ -87,13 +87,7 @@ body {
 .product-card {
   display: flex;
   flex-direction: column;
-  width: 250px;
   gap: 10px;
-}
-
-.product-card .product-image {
-  border-radius: 5%;
-  margin-block-end: 10px;
 }
 
 .product-info {
@@ -184,4 +178,25 @@ body {
     align-items: center;
     margin-inline-start: 10px;
   }
+}
+
+.carousel-container {
+  position: relative;
+  padding-block-end: 35px;
+  padding-inline: 20px;
+  overflow: hidden;
+  overflow-x: auto;
+  scrollbar-color: #969696 #d8d8d8;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 60px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.product-card .product-image {
+  border-radius: 5%;
+  margin-block-end: 10px;
+  max-width: 250px;
 }
