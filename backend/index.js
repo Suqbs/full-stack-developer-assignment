@@ -70,5 +70,5 @@ app.get('/api/products', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Go here to access the Website: http://localhost:${PORT}`);
+    console.log(`If you are on local, go here, but change the fetch URL in frontend: http://localhost:${PORT}`);
 });
