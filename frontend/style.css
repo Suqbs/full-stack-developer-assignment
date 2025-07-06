@@ -52,3 +52,129 @@ video {
 
 }
 /* FONT FACES ENDS HERE */
+
+:root {
+  --clr-yellow-gold: #E6CA97;
+  --clr-white-gold: #D9D9D9;
+  --clr-rose-gold: #E1A4A9;
+
+  /* We think the default is 16px, so we use rems based on that. */
+  --fontsize-45: 2.8125rem; /* 45px */
+  --font-size-15: 0.9375rem; /* 15px */
+  --font-size-14: 0.875rem; /* 14px */
+  --font-size-12: 0.75rem; /* 12px */
+}
+
+body {
+  letter-spacing: 0.5px;
+}
+
+.title {
+  font-family: 'avenirbook', sans-serif;
+  font-size: var(--fontsize-45);
+  font-weight: bold;
+  text-align: center;
+  margin-block-end: 20px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  gap: 10px;
+}
+
+.product-card .product-image {
+  border-radius: 5%;
+  margin-block-end: 10px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-block-end: 10px;
+
+  & h2 {
+    font-family: 'montserratmedium', sans-serif;
+    font-size: var(--font-size-15);
+    font-weight: bold;
+  }
+
+  & p.price {
+    font-family: 'montserratregular', sans-serif;
+    font-size: var(--font-size-15);
+  }
+}
+
+.color-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.picked-color {
+  font-family: 'avenirbook', sans-serif;
+  font-size: var(--font-size-12);
+}
+
+.color-circle {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  margin-inline-end: 5px;
+  cursor: pointer;
+}
+
+.color-circle.active {
+  outline: 1px solid #333;
+  outline-offset: 4px;
+}
+
+.color-yellow-gold {
+  background-color: var(--clr-yellow-gold);
+}
+
+.color-white-gold {
+  background-color: var(--clr-white-gold);
+}
+
+.color-rose-gold {
+  background-color: var(--clr-rose-gold);
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+
+  & .star {
+    position: relative;
+    width: 24px;
+    height: 24px;
+  }
+
+  & .filled-star {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    white-space: nowrap;
+
+    & img {
+      width: 24px;
+      height: 24px;
+
+      max-width: none;
+    }
+  }
+
+  & .rating {
+    font-family: 'avenirbook', sans-serif;
+    font-size: var(--font-size-14);
+    align-items: center;
+    margin-inline-start: 10px;
+  }
+}
