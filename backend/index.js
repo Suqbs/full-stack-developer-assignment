@@ -11,7 +11,6 @@ app.use(cors());
 const frontendPath = '../frontend';
 app.use(express.static(frontendPath));
 
-console.log('Sunucu başladı');
 
 function GetGoldPrice() {
     return fetch("https://kapalicarsi.apiluna.org/")

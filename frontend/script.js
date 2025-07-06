@@ -18,7 +18,6 @@ function InitializeCarousel() {
             for (const card of productCards) {
                 if (card.offsetLeft > currentScroll + (cardWidth / 2)) {
                     targetScroll = card.offsetLeft;
-                    console.log("Gidilen konum", targetScroll);
                     break;
                 }
             }
@@ -37,7 +36,6 @@ function InitializeCarousel() {
 
                 if (card.offsetLeft < currentScroll - (cardWidth / 2)) {
                     targetScroll = card.offsetLeft;
-                    console.log("Gidilen konum", targetScroll);
                     break;
                 }
             }
@@ -52,12 +50,10 @@ async function FetchProducts() {
     try {
         const response = await fetch('/api/products');
         const products = await response.json();
-        console.log('Ürünler:', products);
         return products;
 
     } catch (error) {
         console.error('Fetch hatası:', error);
-        // To prevent the application from crashing, we return an empty array.
         return [];
     }
 }
@@ -133,9 +129,6 @@ function createColorOptions(colors, productImageElement) {
     const colorInfoContainer = document.createElement('div');
     colorInfoContainer.className = 'color-info';
 
-    console.log("Renkler:", colors);
-    console.log("Ürün resim elementi:", productImageElement);
-
     const optionsContainer = document.createElement('div');
     optionsContainer.className = 'color-options';
 
@@ -185,7 +178,6 @@ function createColorOptions(colors, productImageElement) {
 function createStarRating(rating) {
     const starsContainer = document.createElement('div');
     starsContainer.className = 'stars';
-    console.log("Puan:", rating);
 
     for (let i = 1; i <= 5; i++) {
         const starSpan = document.createElement('span');
