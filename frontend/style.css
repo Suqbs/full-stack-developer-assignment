@@ -69,12 +69,19 @@ body {
   letter-spacing: 0.5px;
 }
 
+.container {
+  width: 90%;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+
 .title {
   font-family: 'avenirbook', sans-serif;
   font-size: var(--fontsize-45);
   font-weight: bold;
   text-align: center;
-  margin-block-end: 20px;
+  margin-block-start: 5%;
+  margin-block-end: 80px;
 }
 
 .product-card {
