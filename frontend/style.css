@@ -74,8 +74,8 @@ video {
 }
 
 .container {
-  width: 90%;
   margin-inline: auto;
+  padding-inline: 10px;
 }
 
 .title {
