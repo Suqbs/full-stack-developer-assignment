@@ -35,24 +35,31 @@ app.get('/api/products', async (req, res) => {
     try {
         const goldPrice = await GetGoldPrice();
 
-        // This line doesnt work
-        const productsData = fs.readFileSync('products.json', {encoding: "utf8"});
+        const productsData = fs.readFileSync('products.json', { encoding: "utf8" });
         const products = JSON.parse(productsData);
 
-        const productsWithPrice = products.map(product => {
+        const productsWithFormattedData = products.map(product => {
             const price = (product.popularityScore + 1) * product.weight * goldPrice;
+            const rating = (product.popularityScore * 5).toFixed(1);
+
+            const colors = Object.keys(product.images).map(key => {
+                return {
+                    key: key,                        
+                    imageUrl: product.images[key]  
+                };
+            });
+
+            const { images, ...restOfProduct } = product;
 
             return {
-                ...product,
-                price: parseFloat(price.toFixed(2))
-            }
-        })
+                ...restOfProduct,
+                price: parseFloat(price.toFixed(2)),
+                colors: colors,
+                rating: rating,
+            };
+        });
 
-        console.log("--- PRODUCT DATA ---");
-        console.log(productsWithPrice);
-        console.log("--------------------");
-
-        res.json(productsWithPrice);
+        res.json(productsWithFormattedData);
     }
     catch (error) {
         console.log("Error fetching products");
