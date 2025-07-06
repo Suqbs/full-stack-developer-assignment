@@ -233,3 +233,10 @@ video {
   border-radius: 5%;
   margin-block-end: 10px;
 }
+
+/* Hide carousel buttons on mobile */
+@media (max-width: 768px) {
+  .carousel-button {
+    display: none;
+  }
+}
