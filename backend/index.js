@@ -8,6 +8,9 @@ const PORT = 3000;
 
 app.use(cors());
 
+const frontendPath = '../frontend';
+app.use(express.static(frontendPath));
+
 console.log('Sunucu başladı');
 
 function GetGoldPrice() {
@@ -67,5 +70,5 @@ app.get('/api/products', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`API sunucusunun adresi: http://localhost:${PORT}`);
+    console.log(`Go here to access the Website: http://localhost:${PORT}`);
 });
