@@ -73,10 +73,6 @@ video {
   --gap-between-cards: 50px;
 }
 
-body {
-  letter-spacing: 0.5px;
-}
-
 .container {
   width: 90%;
   margin-inline: auto;
