@@ -22,35 +22,37 @@ video {
   display: block;
   max-width: 100%;
 }
+
 /* CSS RESET ENDS HERE */
 
 /* FONT FACES */
 @font-face {
-    font-family: 'avenirbook';
-    src: url('avenir-book-webfont.woff2') format('woff2'),
-         url('avenir-book-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'avenirbook';
+  src: url('avenir-book-webfont.woff2') format('woff2'),
+    url('avenir-book-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'montserratmedium';
-    src: url('montserrat-medium-webfont.woff2') format('woff2'),
-         url('montserrat-medium-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'montserratmedium';
+  src: url('montserrat-medium-webfont.woff2') format('woff2'),
+    url('montserrat-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'montserratregular';
-    src: url('montserrat-regular-webfont.woff2') format('woff2'),
-         url('montserrat-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'montserratregular';
+  src: url('montserrat-regular-webfont.woff2') format('woff2'),
+    url('montserrat-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 
 }
+
 /* FONT FACES ENDS HERE */
 
 :root {
@@ -59,10 +61,14 @@ video {
   --clr-rose-gold: #E1A4A9;
 
   /* We think the default is 16px, so we use rems based on that. */
-  --fontsize-45: 2.8125rem; /* 45px */
-  --font-size-15: 0.9375rem; /* 15px */
-  --font-size-14: 0.875rem; /* 14px */
-  --font-size-12: 0.75rem; /* 12px */
+  --fontsize-45: 2.8125rem;
+  /* 45px */
+  --font-size-15: 0.9375rem;
+  /* 15px */
+  --font-size-14: 0.875rem;
+  /* 14px */
+  --font-size-12: 0.75rem;
+  /* 12px */
 }
 
 body {
@@ -82,12 +88,6 @@ body {
   text-align: center;
   margin-block-start: 5%;
   margin-block-end: 80px;
-}
-
-.product-card {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
 
 .product-info {
@@ -180,10 +180,13 @@ body {
   }
 }
 
-.carousel-container {
+.carousel-wrapper {
   position: relative;
-  padding-block-end: 35px;
-  padding-inline: 20px;
+  max-width: 1200px;
+  margin-block-end: 35px;
+}
+
+.carousel-container {
   overflow: hidden;
   overflow-x: auto;
   scrollbar-color: #969696 #d8d8d8;
@@ -191,8 +194,36 @@ body {
 
 .carousel-track {
   display: flex;
-  gap: 60px;
+  gap: 50px;
   transition: transform 0.5s ease-in-out;
+  margin-block-end: 35px;
+  padding: 5px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.carousel-button.prev {
+  left: -32px;
+}
+
+.carousel-button.next {
+  right: -32px;
 }
 
 .product-card .product-image {
